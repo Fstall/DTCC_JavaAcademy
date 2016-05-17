@@ -1,0 +1,166 @@
+
+
+
+
+#noborderTable th, td {
+	/*borders and padding to make the table readable*/
+	border: 0px solid #000;
+	padding: .5em
+}
+
+
+.cpYearNavigation {
+ font-size : 8pt;
+ font-family : arial;
+ font-weight : bold;
+ background-color : gray;
+ text-align : center;
+ text-decoration : none;
+ color : #ffffff;
+}
+
+.cpMonthNavigation {
+ font-weight : bold;
+ font-size : 8pt;
+ font-family : arial;
+ text-align : center;
+ text-decoration : none;
+ color : #ffffff;
+ background-color : gray;
+}
+
+.cpDayColumnHeader {
+ font-size : 8pt;
+ font-family : arial;
+}
+
+.cpCurrentMonthDate {
+ font-size : 8pt;
+ font-family : arial;
+ font-weight : bold;
+ text-align : right;
+ text-decoration : none;
+ color : gray;
+}
+
+.cpCurrentMonthDateDisabled {
+ font-size : 8pt;
+ font-family : arial;
+}
+
+.cpOtherMonthDate {
+ font-size : 8pt;
+ font-family : arial;
+ text-align : right;
+ text-decoration : none;
+ color : #808080;
+}
+
+.cpOtherMonthDateDisabled {
+ font-size : 8pt;
+ font-family : arial;
+ text-align : right;
+ text-decoration : line-through;
+ color : #d0d0d0;
+}
+
+.cpCurrentdate {
+ font-size : 8pt;
+ font-family : arial;
+ font-weight : bold;
+ text-align : right;
+ text-decoration : none;
+ color : #ffffff;
+}
+
+.cpCurrentdateDisabled {
+ font-size : 8pt;
+ font-family : arial;
+ text-align : right;
+ text-decoration : line-through;
+ color : #d0d0d0;
+}
+
+.cpTodaytext {
+ font-size : 8pt;
+ font-family : arial;
+}
+
+.cpTodaytextdisabled {
+ font-size : 8pt;
+ font-family : arial;
+}
+
+.cptext {
+ font-size : 8pt;
+ font-family : arial;
+}
+
+td.cpDayColumnHeader {
+ border-right : gray 0px solid;
+ border-top : gray 0px solid;
+ border-left : gray 0px solid;
+ border-bottom : gray 1px solid;
+ text-align : right;
+}
+
+.cpCurrentMonthDateDisabled {
+ color : #d0d0d0;
+ text-align : right;
+ text-decoration : line-through;
+}
+
+td.cpCurrentdate {
+ border-right : #000000 thin solid;
+ border-top : #000000 thin solid;
+ border-left : #000000 thin solid;
+ color : #ffffff;
+ border-bottom : #000000 thin solid;
+ background-color : gray;
+}
+
+td.cpCurrentdateDisabled {
+ border-right : #ffaaaa thin solid;
+ border-top : #ffaaaa thin solid;
+ border-left : #ffaaaa thin solid;
+ border-bottom : #ffaaaa thin solid;
+}
+
+td.cpTodaytext {
+ border-right : gray 0px solid;
+ border-top : gray 1px solid;
+ border-left : gray 0px solid;
+ border-bottom : gray 0px solid;
+}
+
+td.cpTodaytextdisabled {
+ border-right : gray 0px solid;
+ border-top : gray 1px solid;
+ border-left : gray 0px solid;
+ border-bottom : gray 0px solid;
+}
+
+a.cpTodaytext {
+ height : 20px;
+}
+
+span.cpTodaytextdisabled {
+ height : 20px;
+ color : #d0d0d0;
+}
+
+A.cpTodaytext {
+ font-weight : bold;
+ color : gray;
+}
+
+.cpBorder {
+ border-right : darkgray thin solid;
+ border-top : darkgray thin solid;
+ border-left : darkgray thin solid;
+ border-bottom : darkgray thin solid;
+}
+
+// ------------------------------------------- Trellist Genius Work goes here
+
+

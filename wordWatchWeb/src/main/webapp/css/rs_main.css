@@ -1,0 +1,468 @@
+   
+        .rs_main_header
+        {
+            position:relative;
+            width:100%;
+            height:80px;
+            margin:0px;
+            padding:0px;
+            border:0px;
+            background:url(../images/shared/rs_main_header1.gif) repeat-y top center #06101c;
+        }
+        
+        
+        .rs_main_background
+        {
+            position:relative;
+            width:100%;
+            height:100%;
+            margin:0px;
+            padding:0px;
+            border:0px;
+            background:url(../images/shared/rs_main_background.gif) repeat-y top center #21394E;
+        }
+        
+        
+        .rs_container
+        {
+            position:relative;
+            margin-left:10%;
+            margin-right:10%;
+            background:url(../images/shared/rs_matt_background.gif) repeat-y center;
+        }
+        
+        
+        div#vertical-scroll-container
+        {
+            width:100%;
+            overflow:hidden;
+            position:relative;
+            height:100%;
+        }
+        
+        div#header-container
+        {
+            margin:0;
+            overflow:hidden;
+            padding:0;
+        }
+        
+        div#vertical-scroll-area
+        {
+            padding-top:0px;
+            margin-top:0px;
+            border-top:0px;
+            overflow-y:auto;
+            overflow-x:hidden;
+            padding:0px;
+            height:800px;
+        }
+         
+        
+        h3
+        {
+            margin:0px 0px 0.6em 0.6em;
+            padding:0px 0px 5px 0px;
+            border:0px;
+            color:#FFFFFF;
+            font-size:30px;
+            font-family:MS Reference Sans Serif, Arial, Helvetica, sans-serif;
+        }
+        
+        span#company_logo
+        {
+            margin:0px 0px 0.6em 0.6em;
+            padding:0px 0px 5px 0px;
+            border:0px;
+            color:#FFFFFF;
+            font-size:60px;
+            font-family:MS Reference Sans Serif, Arial, Helvetica, sans-serif;
+        }
+        
+        span#company_signout
+        {
+            padding-bottom:0px 0px 0px 0px;
+            border:0px;
+            color:#FFFFFF;
+            font-size:16px;
+            font-family:MS Reference Sans Serif, Arial, Helvetica, sans-serif;
+        }
+        
+        ul.homepagetabs
+        {
+        margin:0;
+        padding:0;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+        border:0;
+        behavior: url(C:/Users/Tony/Downloads/PIE-1.0.0/PIE.htc);
+        }
+        
+        div.homepagetabs
+        {
+        margin:0;
+        padding:0;
+        display:block;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+        border:0;
+        behavior: url(C:/Users/Tony/Downloads/PIE-1.0.0/PIE.htc);
+        }
+        
+        table.portfolio_table
+        { 
+            /* top right bottom left */
+            margin: 0px 0.6em 0px 1.6em;
+            width: 96%;
+            background: #FFFFFF;
+        }
+        
+        table.detail_table
+        { 
+            /* top right bottom left */
+            margin: 0px 0.6em 0px 0.6em;
+            width: 96%;
+            background: #FFFFFF;
+        }
+        
+        table.portfolio_table th
+        {
+            padding: 1px 8px 0px 8px;
+            font-size: 90%;
+            line-height: 30px;
+            font-family: MS Reference Sans Serif, Arial, Helvetica, sans-serif;
+            color: #72767d;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: solid 1px #B3C3D2;
+        }
+        
+        
+        
+        table.portfolio_table th.lft_col
+        {
+            padding: 0px 0px 0px 0px;
+            border-left: 0px;
+            background: url(../images/shared/rs_table_border_topLeft.gif) no-repeat top left;
+        }
+        
+        table.portfolio_table th.rgt_col
+        {
+            padding: 0px 0px 0px 0px;
+            border-right: 0px;
+            background: url(../images/shared/rs_table_border_topRight.gif) no-repeat top right;
+        }
+        
+        .lastRowLeftCell
+        {
+            background: url(../images/shared/rs_table_border_bottomLeft.gif) no-repeat bottom left;
+            border-left: 0px;
+            border-bottom: 0px;
+        }
+        
+        .lastRowRightCell
+        {
+            background: url(../images/shared/rs_table_border_bottomRight.gif) no-repeat bottom right;
+            border-right: 0px;
+            border-bottom: 0px;
+        }
+        
+        table.portfolio_table tr
+        {
+            font-size: 90%;
+            font-family: MS Reference Sans Serif, Arial, Helvetica, sans-serif;
+            color: #72767d;
+            line-height: 27px;
+        }
+        
+        
+        table.portfolio_table tr td
+        {
+            font-size: 90%;
+            font-family: MS Reference Sans Serif, Arial, Helvetica, sans-serif;
+            color: #72767d;
+            border-left: solid 1px #B3C3D2;
+            border-right: solid 1px #B3C3D2;
+            border-bottom: solid 1px #B3C3D2;
+            padding-left: 3px;
+        }
+        
+          div#left-div
+        {
+            padding-top: 0px;
+            margin-top: 0px;
+            border-top: 0px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 0px;
+            height: 500px;
+        }
+        
+        div#right-div
+        {
+            padding-top: 0px;
+            margin-top: 0px;
+            border-top: 0px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 0px;
+            height: 500px;
+        }
+
+        div#left-div-example-word
+        {
+            padding-top: 0px;
+            margin-top: 0px;
+            border-top: 0px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 0px;
+            height: 100px;
+        }
+
+
+
+
+
+        .general-div
+        {
+            padding-top: 0px;
+            margin-top: 0px;
+            border-top: 0px;
+            overflow-y: hidden;
+            overflow-x: hidden;
+            padding: 0px; 
+        }
+
+        .general-div-header-container
+        {
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
+        }
+        
+        .general-div-vertical-scroll-area
+        {
+            padding-top: 0px;
+            margin-top: 0px;
+            border-top: 0px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 0px;
+        } 
+
+        div#date-div-vertical-scroll-area
+        {
+            padding-top: 0px;
+            margin-top: 0px;
+            border-top: 0px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 0px;
+            height: 30px;
+        } 
+
+
+
+
+
+
+        div#left-div-definition
+        {
+            padding-top: 0px;
+            margin-top: 0px;
+            border-top: 0px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 0px; 
+        }
+
+        div#left-div-definition-header-container
+        {
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
+        }
+        
+        div#left-div-definition-vertical-scroll-area
+        {
+            padding-top: 0px;
+            margin-top: 0px;
+            border-top: 0px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 0px;
+            height: 150px;
+        } 
+
+
+        div#left-div-dateFirstSelected
+        {
+            padding-top: 0px;
+            margin-top: 0px;
+            border-top: 0px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 0px;
+            height: 100px;
+        }
+
+
+        div#right-div-sample-sentence-vertical-scroll-area
+        {
+            padding-top: 0px;
+            margin-top: 0px;
+            border-top: 0px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 0px;
+            height: 150px;
+        }
+
+        div#left-div-prefix-vertical-scroll-area
+        {
+            padding-top: 0px;
+            margin-top: 0px;
+            border-top: 0px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 0px;
+            height: 150px;
+        } 
+
+        div#left-div-tools-vertical-scroll-area
+        {
+            padding-top: 0px;
+            margin-top: 0px;
+            border-top: 0px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 0px;
+            height: 150px;
+        } 
+        
+        div#right-div-picture-vertical-scroll-area
+        {
+            padding-top: 0px;
+            margin-top: 0px;
+            border-top: 0px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 0px;
+            height: 150px;
+        } 
+
+
+
+        div#right-div-video
+        {
+            padding-top: 0px;
+            margin-top: 0px;
+            border-top: 0px;
+            overflow-y: hidden;
+            overflow-x: hidden;
+            padding: 0px; 
+        }
+
+        div#right-div-video-header-container
+        {
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
+        }
+        
+        div#right-div-video-vertical-scroll-area
+        {
+            padding-top: 0px;
+            margin-top: 0px;
+            border-top: 0px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 0px;
+            height: 250px;
+        } 
+        textarea.textbox
+        {
+        display:block;
+        width:96.5%;
+        -webkit-border-bottom-right-radius: 15px;
+        -moz-border-bottom-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        -webkit-border-bottom-left-radius: 15px;
+        -moz-border-bottom-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border:0;
+        behavior: url(C:/Users/Tony/Downloads/PIE-1.0.0/PIE.htc);
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+         
+        
+        table.detail_table th
+        {
+            padding: 1px 17px 0px 17px;
+            font-size: 95%;
+            line-height: 30px;
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+            color: #72767d;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: solid 1px #B3C3D2;
+        }
+        
+        
+        
+        table.detail_table th.lft_col
+        {
+            padding: 1px 15px 0px 17px;
+            border-left: 0px;
+            background: url(../images/shared/rs_table_border_topLeft.gif) no-repeat top left;
+        }
+        
+        table.detail_table th.rgt_col
+        {
+            padding: 1px 17px 0px 17px;
+            border-right: 0px;
+            background: url(../images/shared/rs_table_border_topRight.gif) no-repeat top right;
+        }
+         
+        table.detail_table tr
+        {
+            font-size: 95%;
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+            color: #72767d;
+            line-height: 27px;
+        }
+        
+        
+        table.detail_table tr td
+        {
+            font-size: 95%;
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+            color: #72767d;
+            border-left: solid 1px #B3C3D2;
+            border-right: solid 1px #B3C3D2;
+            border-bottom: solid 1px #B3C3D2;
+            padding: 1px 0px 1px;
+        }
+        
+         div#left-div-note-vertical-scroll-area
+        {
+            padding-top: 0px;
+            margin-top: 0px;
+            border-top: 0px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 0px;
+            height: 150px;
+        } 
+        
+        

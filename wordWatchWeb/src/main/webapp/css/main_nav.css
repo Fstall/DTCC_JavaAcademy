@@ -1,0 +1,100 @@
+/* rollover effect on main buttons */
+#main_nav li:hover a { background: none }
+#main_nav li.on a { background: none } /* apply 'on' class to keep button in on mouse over state */
+
+#main_nav li ul.subnav { 
+	display: none; 
+	position: absolute; 
+	top: 0px; 
+	left: 0px; 
+	z-index: 50; 
+	margin: 0px; 
+	padding: 0px; 
+	border-left: solid 1px #DBDBDD; 
+	border-right: solid 1px #DBDBDD; 
+	background: none; 
+	text-align: left; 
+	background-color: #20394F; 
+	opacity: .87; 
+	*filter:alpha(opacity=87); 
+}
+
+/* 'filter' for legacy IE - yuck won't validate */
+#main_nav li ul.subnav li { 
+	margin: 0px; 
+	padding: 0px; 
+	border: 0px; 
+	border-bottom: solid 1px #DBDBDD; 
+	background: none; 
+	text-align: left; 
+	font-weight: bold 
+}
+
+#main_nav li ul.subnav li a { 
+	display: block; 
+	margin: 0px; 
+	padding: 4px 2px; 
+	background: none; 
+	font-size: 85%; 
+	text-align: left 
+}
+
+#main_nav li ul.subnav li a:hover { 
+	color: #20394F; 
+	background-color: #F5FAFE 
+}
+ 
+/* NOTE: all subnavs are absolutely positioned to the main #app_container wrapper div */
+
+/* subnav positions and sizes */
+/* starting top position must flush with the page_header */
+#main_nav li ul.subnav { 
+	top: 20px; 
+	right: auto 
+}
+
+
+/* reset and rollover effect for subnav */
+#main_nav li:hover a { background: none }
+
+#main_nav li:hover ul.subnav { display: block }
+#main_nav li:hover ul.subnav li:hover ul.lvl2  { display: block }
+
+/* tchou note 11/18/2009 
+   The position/top coordinates are based on FireFox. The IE parameters
+   are adjusted using Javascript in the header_pf.html. 
+*/
+#main_nav { 
+	position: absolute;	
+	z-index: 0; 
+	top: 118px;
+	width: 950px; 
+	height: 30px; 
+	margin: 0px; 
+	border-top: solid 1px #DBDBDD; 
+	background: url(../../images/shared/link_bckgrnd_on.gif) repeat-x top center #21394E; 
+	font-weight: bold 
+}
+
+#main_nav li { 
+	margin: 0px; 
+	top: -100px;
+	float: left; 
+	border-left: solid 1px #DBDBDD; 
+	list-style: none; 
+	text-align: center 
+}
+
+#main_nav #homeNav { border-width: 0px }
+
+/* set main buttons */
+#main_nav li a { display: block; padding: 6px 0px; float: left; background: url(../../images/shared/link_bckgrnd_off.gif) repeat-x top center #1568B4; text-decoration: none; color: #FFF; line-height: 18px }
+
+
+/* disabled menu styles */
+#main_nav .disabledMenuOption a { color: #A9A9A9 }
+#main_nav .disabledMenuOption a:hover { background: url(../../images/shared/link_bckgrnd_off.gif) repeat-x top center #1568B4; }
+
+/* disabled sub-menu styles */
+#main_nav .disabledSubMenuOption a { color: #A9A9A9 }
+#main_nav .disabledSubMenuOption a:hover { color: #A9A9A9; background-color: inherit }

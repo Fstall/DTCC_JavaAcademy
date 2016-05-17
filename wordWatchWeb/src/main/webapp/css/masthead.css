@@ -1,0 +1,38 @@
+#masthead { position: relative; width: 950px; height: 89px; margin: 0px auto; background: url(../../images/shared/masthead_background.gif) no-repeat top right }
+
+/* main logo - upper left */
+#masthead h1#main_header { position: absolute; left: 16px; top: 18px; width: 419px; height: 53px; margin: 0px; line-height: 0px }
+#masthead h1#main_header span { position: absolute; left: -999999em  }
+
+/* account info box */
+#account_info { position: absolute; z-index: 10; top: 11px; left: 536px; width: 244px; margin: 0px; font-weight: bold; font-size: 84.7% }
+
+#account_info a { text-decoration: none; color: #666 }
+#account_info a span { position: absolute; left: -999999em }
+
+#account_info dd { margin: 0px }
+
+#account_info #accounts { margin: 4px 0px 0px 0px; padding: 0px 0px 0px 4px; background: url(../../images/shared/dropdown_bckgrnd01.gif) no-repeat 0px 0px; font-weight: normal }
+#account_info #accounts li { width: 194px; height: 20px; margin: 0px; list-style: none; overflow: visible; word-wrap: nowrap }
+
+#account_info #accounts a { display: block; height: 18px; padding: 2px 24px 0px 3px; line-height: 16px }
+
+#account_info #accounts #additional_accounts { display: none; width: 185px; max-height: 70px; overflow: auto; margin: 0px; padding: 0px 0px 1px 0px; border-width: 0px 1px 1px 1px; border-color: #B3C3D2; border-style: solid; background: url(../../images/shared/dropdown_bckgrnd02.gif) repeat-x top center #FFF  }
+* html #account_info #accounts #additional_accounts { height: 70px; background-attachment: fixed } /* Holly Hack, IE6 doesn't support max-height, but interprets height as if it's max-height - don't worry IE7 fixes bug and ignores Holly Hack */
+
+#account_info #accounts #additional_accounts li { width: auto; height: auto; padding: 0px }
+
+#account_info #accounts #additional_accounts a { height: auto; padding: 3px 3px 4px 5px; line-height: normal; border-bottom: solid 1px #F2F2F2; background-color: transparent }
+#account_info #accounts #additional_accounts a:hover { background-color: #1B4F7D; color: #FFF }
+
+
+/* utilities - will be needed */
+#utilities { position: absolute; z-index: 0; left: 540px; top: 0px; width: 382px; height: 58px; margin: 0px; background: url(../../images/shared/utilities_background.gif) no-repeat bottom center; font-size: 85% }
+#utilities dt { position: absolute; left: -999999em }
+#utilities dd { position: relative; margin: 0px }
+#utilities dd ul { position: absolute; top: 13px; right: 16px; height: 33px; margin: 0px; padding-left: 13px; border-left: solid 1px #CCC; z-index: 20 }
+#utilities dd ul li { display: inline; margin: 0px; list-style-type: none; line-height: 33px }
+#utilities dd ul li.logout { margin-left: 5px; padding-left: 8px; border-left: solid 1px #5390C7 }
+#utilities dd ul li a abbr { border: 0px }
+
+

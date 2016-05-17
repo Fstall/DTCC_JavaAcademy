@@ -1,0 +1,8 @@
+<scanning xmlns="urn:jboss:scanning:1.0">
+  <path name="lib/mybatis-3.0.4.jar">
+    <exclude name="org.apache.ibatis.executor.resulset"/>
+  </path>
+  <path name="lib/mybatis-3.1.1.jar">
+    <exclude name="org.apache.ibatis.executor.resulset"/>
+  </path>
+</scanning>

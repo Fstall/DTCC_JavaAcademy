@@ -1,0 +1,123 @@
+.jumpmenu {
+ font-weight : normal;
+ font-size : 11px;
+ color : #333333;
+ font-family : Arial, Helvetica, sans-serif;
+ letter-spacing : 0.05em;
+}
+
+.orangeline {
+ background-color : #0B333C;
+ width : 100%;
+ height : 5%;
+ font-size : 1px;
+ vertical-align: bottom;
+}
+
+.um_section_header {
+        margin: 0px 0px 0.6em 0px;
+        padding: 0px 0px 5px 0px;
+        color: #0B333C;
+        font-size: 160%;
+	font-weight: bold;
+}
+
+#VSpacing {
+        width: 900px;
+        height: 16px;
+        background: url(../../images/spacer.gif) no-repeat 0px 0px;
+}
+
+.webaddr {
+ font-weight : bold;
+ font-size : 14px;
+ color : #003333;
+ font-family : Arial, Helvetica, sans-serif;
+}
+
+.fakeaddr {
+ font-weight : bold;
+ font-size : 14px;
+ color : #003333;
+ font-family : Arial, Helvetica, sans-serif;
+ text-decoration : none;
+}
+
+.fakeaddr:hover {
+ font-weight : bold;
+ font-size : 14px;
+ color : #003333;
+ font-family : Arial, Helvetica, sans-serif;
+ text-decoration : none;
+}
+
+
+
+A.DarkGray10:hover {
+ font-weight : bold;
+ font-size : 8pt;
+ color : #1567B3;
+ font-family : verdana, sans-serif;
+ text-decoration : underline;
+ white-space : nowrap;
+}
+
+A.DarkGray10:link {
+ font-weight : bold;
+ font-size : 8pt;
+ color : #1567B3;
+ font-family : verdana, sans-serif;
+ text-decoration : none;
+ white-space : nowrap;
+}
+
+A.DarkGray10:visited {
+ font-weight : bold;
+ font-size : 8pt;
+ color : #1567B3;
+ font-family : verdana, sans-serif;
+ text-decoration : none;
+ white-space : nowrap;
+}
+
+.orangetext {
+ font-weight : bold;
+ font-size : 16px;
+ color : color: #1567B3;
+ font-family : Arial, Helvetica, sans-serif;
+}
+
+
+#divUpControl {
+ z-index : 1;
+ text-align : right;
+}
+
+#divScrollbar {
+ z-index : 2;
+ width: 18px;
+ height : 77px;
+ text-align : right;
+}
+
+#divDownControl {
+ z-index : 3;
+ text-align : right;
+}
+
+#divContainer {
+ visibility : hidden;
+ overflow : hidden;
+ width: 315px;
+ clip : rect(0px, 315px, 105px, 0px);
+ height : 105px;
+}
+
+#divContent {
+ left : 0px;
+ position : relative;
+ top : 0px;
+}
+
+
+

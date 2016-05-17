@@ -1,0 +1,102 @@
+/* reset.css, a modified version of YUI's CSS Foundation reset settings - http://developer.yahoo.net/yui/license.txt - version: 2.5.1
+and Eric Meyer's version - http://meyerweb.com/eric/tools/css/reset/index.html */
+
+html { margin: 0; padding: 0; color: #000; background: #FFF }
+body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6,
+p, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, s, samp, small, strike, strong, sub, sup, tt, var, blockquote, q,
+dl, dt, dd, ul, ol, li,
+form, fieldset, legend, label,
+table, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+	}
+
+body {
+	line-height: 1;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+	}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+	font-style: normal;
+	font-weight: normal
+	}
+
+li {
+	list-style: none
+	}
+
+caption, th {
+	text-align: left
+	}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal
+	}
+
+blockquote, q {
+	quotes: none
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none
+}
+
+abbr, acronym {
+	font-variant: normal
+	}
+
+/* to preserve line-height and selector appearance */
+
+sup {
+	vertical-align: text-top
+	}
+
+sub {
+	vertical-align: text-bottom
+	}
+
+input, textarea, select {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit
+	}
+
+/* to enable resizing for IE */
+
+input, textarea, select {
+	*font-size: 100%
+	}
+
+/* because legend doesn't inherit in IE */
+
+legend {
+	color: #000
+	}
+
+/* remember to define focus styles! */
+
+:focus {
+	outline: 0
+	}
+
+/* remember to highlight inserts somehow! */
+
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}

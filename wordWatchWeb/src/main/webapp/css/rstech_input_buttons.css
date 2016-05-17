@@ -1,0 +1,67 @@
+ 
+
+/* a pain, but needed... might as well make seperate classes - .color_widthXheight
+lgtBlu = light blue
+drkBlu = dark blue
+lgtGry = light gray
+*/
+
+input.lgtBlu_20x22 { height: 22px; width: 20px; color: #00549F; background: url(../../images/shared/rstech_input_buttons/btn_lgtBlu_20x22.gif) no-repeat 0px 0px transparent }
+input.drkBlu_20x22 { height: 22px; width: 20px; color: #F4F8FC; background: url(../../images/shared/rstech_input_buttons/btn_drkBlu_20x22.gif) no-repeat 0px 0px transparent }
+input.lgtGry_20x22 { height: 22px; width: 20px; color: #161616; background: url(../../images/shared/rstech_input_buttons/btn_lgtGry_20x22.gif) no-repeat 0px 0px transparent }
+
+input.lgtBlu_30x22 { height: 22px; width: 30px; color: #00549F; background: url(../../images/shared/rstech_input_buttons/btn_lgtBlu_30x22.gif) no-repeat 0px 0px transparent }
+input.drkBlu_30x22 { height: 22px; width: 30px; color: #F4F8FC; background: url(../../images/shared/rstech_input_buttons/btn_drkBlu_30x22.gif) no-repeat 0px 0px transparent }
+input.lgtGry_30x22 { height: 22px; width: 30px; color: #161616; background: url(../../images/shared/rstech_input_buttons/btn_lgtGry_30x22.gif) no-repeat 0px 0px transparent }
+
+input.lgtBlu_40x22 { height: 22px; width: 40px; color: #00549F; background: url(../../images/shared/rstech_input_buttons/btn_lgtBlu_40x22.gif) no-repeat 0px 0px transparent }
+input.drkBlu_40x22 { height: 22px; width: 40px; color: #F4F8FC; background: url(../../images/shared/rstech_input_buttons/btn_drkBlu_40x22.gif) no-repeat 0px 0px transparent }
+input.lgtGry_40x22 { height: 22px; width: 40px; color: #161616; background: url(../../images/shared/rstech_input_buttons/btn_lgtGry_40x22.gif) no-repeat 0px 0px transparent }
+
+input.lgtBlu_50x22 { height: 22px; width: 50px; color: #00549F; background: url(../../images/shared/rstech_input_buttons/btn_lgtBlu_50x22.gif) no-repeat 0px 0px transparent }
+input.drkBlu_50x22 { height: 22px; width: 50px; color: #F4F8FC; background: url(../../images/shared/rstech_input_buttons/btn_drkBlu_50x22.gif) no-repeat 0px 0px transparent }
+input.lgtGry_50x22 { height: 22px; width: 50px; color: #161616; background: url(../../images/shared/rstech_input_buttons/btn_lgtGry_50x22.gif) no-repeat 0px 0px transparent }
+
+input.lgtBlu_60x22 { height: 22px; width: 60px; color: #00549F; background: url(../../images/shared/rstech_input_buttons/btn_lgtBlu_60x22.gif) no-repeat 0px 0px transparent }
+input.drkBlu_60x22 { height: 22px; width: 60px; color: #F4F8FC; background: url(../../images/shared/rstech_input_buttons/btn_drkBlu_60x22.gif) no-repeat 0px 0px transparent }
+input.lgtGry_60x22 { height: 22px; width: 60px; color: #161616; background: url(../../images/shared/rstech_input_buttons/btn_lgtGry_60x22.gif) no-repeat 0px 0px transparent }
+
+input.lgtBlu_70x22 { height: 22px; width: 70px; color: #00549F; background: url(../../images/shared/rstech_input_buttons/btn_lgtBlu_70x22.gif) no-repeat 0px 0px transparent }
+input.drkBlu_70x22 { height: 22px; width: 70px; color: #F4F8FC; background: url(../../images/shared/rstech_input_buttons/btn_drkBlu_70x22.gif) no-repeat 0px 0px transparent }
+input.lgtGry_70x22 { height: 22px; width: 70px; color: #161616; background: url(../../images/shared/rstech_input_buttons/btn_lgtGry_70x22.gif) no-repeat 0px 0px transparent }
+
+input.lgtBlu_80x22 { height: 22px; width: 80px; color: #00549F; background: url(../../images/shared/rstech_input_buttons/btn_lgtBlu_80x22.gif) no-repeat 0px 0px transparent }
+input.drkBlu_80x22 { height: 22px; width: 80px; color: #F4F8FC; background: url(../../images/shared/rstech_input_buttons/btn_drkBlu_80x22.gif) no-repeat 0px 0px transparent }
+input.lgtGry_80x22 { height: 22px; width: 80px; color: #161616; background: url(../../images/shared/rstech_input_buttons/btn_lgtGry_80x22.gif) no-repeat 0px 0px transparent }
+input.lgtGry_80x22_disabled { height: 22px; width: 80px; color: #CCCCCC; background: url(../../images/shared/rstech_input_buttons/btn_lgtGry_80x22.gif) no-repeat 0px 0px transparent }
+
+input.lgtBlu_90x22 { height: 22px; width: 90px; color: #00549F; background: url(../../images/shared/rstech_input_buttons/btn_lgtBlu_90x22.gif) no-repeat 0px 0px transparent }
+input.drkBlu_90x22 { height: 22px; width: 90px; color: #F4F8FC; background: url(../../images/shared/rstech_input_buttons/btn_drkBlu_90x22.gif) no-repeat 0px 0px transparent }
+input.lgtGry_90x22 { height: 22px; width: 90px; color: #161616; background: url(../../images/shared/rstech_input_buttons/btn_lgtGry_90x22.gif) no-repeat 0px 0px transparent }
+input.lgtGry_90x22_disabled { height: 22px; width: 90px; color: #CCCCCC; background: url(../../images/shared/rstech_input_buttons/btn_lgtGry_90x22.gif) no-repeat 0px 0px transparent }
+
+input.lgtBlu_100x22 { height: 22px; width: 100px; color: #00549F; background: url(../../images/shared/rstech_input_buttons/btn_lgtBlu_100x22.gif) no-repeat 0px 0px transparent }
+input.drkBlu_100x22 { height: 22px; width: 100px; color: #F4F8FC; background: url(../../images/shared/rstech_input_buttons/btn_drkBlu_100x22.gif) no-repeat 0px 0px transparent }
+input.lgtGry_100x22 { height: 22px; width: 100px; color: #161616; background: url(../../images/shared/rstech_input_buttons/btn_lgtGry_100x22.gif) no-repeat 0px 0px transparent }
+
+input.lgtBlu_110x22 { height: 22px; width: 110px; color: #00549F; background: url(../../images/shared/rstech_input_buttons/btn_lgtBlu_110x22.gif) no-repeat 0px 0px transparent }
+input.drkBlu_110x22 { height: 22px; width: 110px; color: #F4F8FC; background: url(../../images/shared/rstech_input_buttons/btn_drkBlu_110x22.gif) no-repeat 0px 0px transparent }
+input.lgtGry_110x22 { height: 22px; width: 110px; color: #161616; background: url(../../images/shared/rstech_input_buttons/btn_lgtGry_110x22.gif) no-repeat 0px 0px transparent }
+
+input.lgtBlu_120x22 { height: 22px; width: 120px; color: #00549F; background: url(../../images/shared/rstech_input_buttons/btn_lgtBlu_120x22.gif) no-repeat 0px 0px transparent }
+input.drkBlu_120x22 { height: 22px; width: 120px; color: #F4F8FC; background: url(../../images/shared/rstech_input_buttons/btn_drkBlu_120x22.gif) no-repeat 0px 0px transparent }
+input.lgtGry_120x22 { height: 22px; width: 120px; color: #161616; background: url(../../images/shared/rstech_input_buttons/btn_lgtGry_120x22.gif) no-repeat 0px 0px transparent }
+
+input.lgtBlu_140x22 { height: 22px; width: 140px; color: #00549F; background: url(../../images/shared/rstech_input_buttons/btn_lgtBlu_140x22.gif) no-repeat 0px 0px transparent }
+input.drkBlu_140x22 { height: 22px; width: 140px; color: #F4F8FC; background: url(../../images/shared/rstech_input_buttons/btn_drkBlu_140x22.gif) no-repeat 0px 0px transparent }
+input.lgtGry_140x22 { height: 22px; width: 140px; color: #161616; background: url(../../images/shared/rstech_input_buttons/btn_lgtGry_140x22.gif) no-repeat 0px 0px transparent }
+
+input.lgtBlu_160x22 { height: 22px; width: 160px; color: #00549F; background: url(../../images/shared/rstech_input_buttons/btn_lgtBlu_160x22.gif) no-repeat 0px 0px transparent }
+input.drkBlu_160x22 { height: 22px; width: 160px; color: #F4F8FC; background: url(../../images/shared/rstech_input_buttons/btn_drkBlu_160x22.gif) no-repeat 0px 0px transparent }
+input.lgtGry_160x22 { height: 22px; width: 160px; color: #161616; background: url(../../images/shared/rstech_input_buttons/btn_lgtGry_160x22.gif) no-repeat 0px 0px transparent }
+
+input.lgtBlu_180x22 { height: 22px; width: 180px; color: #00549F; background: url(../../images/shared/rstech_input_buttons/btn_lgtBlu_180x22.gif) no-repeat 0px 0px transparent }
+input.drkBlu_180x22 { height: 22px; width: 180px; color: #F4F8FC; background: url(../../images/shared/rstech_input_buttons/btn_drkBlu_180x22.gif) no-repeat 0px 0px transparent }
+input.lgtGry_180x22 { height: 22px; width: 180px; color: #161616; background: url(../../images/shared/rstech_input_buttons/btn_lgtGry_180x22.gif) no-repeat 0px 0px transparent }
+
+input.floatRightDefaultMargin { float:right;margin:10px 10px 10px 10px; }

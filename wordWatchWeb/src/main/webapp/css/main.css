@@ -1,0 +1,145 @@
+@import url(../reset.css);
+@import url(base.css);
+@import url(typography.css);
+@import url(masthead.css);
+@import url(main_pageheader.css);
+@import url(main_nav.css);
+@import url(footer.css);
+@import url(rstech_tables.css);
+@import url(rstech_input_buttons.css);
+@import url(rstech_boxes.css);
+@import url(thickbox.css);
+ 
+
+html#rstech_learning_management { width: 100%; background-color: #adb8b4 }
+
+/* -------------------------------------------------------------------------
+       tag styling
+   -------------------------------------------------------------------------*/
+ 
+a:link { color: #1567B3; text-decoration: underline }
+a:visited { color: #1567B3; text-decoration: underline }
+a:hover { color: #1567B3; text-decoration: none }
+a:focus { color: #1567B3; text-decoration: underline }
+a:active { color: #1567B3; text-decoration: underline }
+
+
+
+abbr { border-color: #D3D3D3 }
+
+/* begin - classes for styling as needed
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.bold { font-weight: bold }
+.italic { font-style: italic }
+.underline { text-decoration: underline }
+.overline { text-decoration: overline }
+.strike { text-decoration: overline }
+.fltlft { float: left }
+.fltrgt { float: right }
+.clrbth { clear: both }
+.clrlft { clear: left }
+.clrrgt { clear: right }
+
+.hide_ADA { position: absolute; left: -999999em } /* hide but remain usable for text readers */
+
+.grayText { color: gray }
+
+/* end - classes for styling needed
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* main wrapper div's */
+#rs_tech_app_container { position: relative; width: 90%; margin: 1px auto; background: url(../images/shared/main_background.gif) repeat top center #adb8b4 }
+/* add the class 'superwide' to #app_container for larger width pages and reset centering (margin: auto) on #masthead and #pageheader */
+#app_container.superwide { width: 1200px; background-color: white } /* set width as needed */
+#app_container.superwide #masthead { margin-left: 0px; margin-right: 0px }
+#app_container.superwide #page_header { margin-left: 0px; margin-right: 0px }
+
+/* content zone has the little drop shadow under the main nav */
+#old_content_zone { z-index: 0; padding: 20px 20px 0px 20px; background: url(../images/shared/content_background.gif) repeat-x top right; font-size: 85% }
+#content_zone { z-index: 0; padding: 20px 20px 0px 20px; background: url(../images/shared/content_background.gif) repeat-x top right; font-size: 85% }
+
+/* Page Control button styles */
+div.page_controls { width: 100%; height: 22px;  }  /* A height replaced overflow:hidden to resolve a Firefox 2 visibility issue */
+div.page_controls span.page_buttons { float: left }
+div.page_controls span.page_buttons input { margin-right: 12px }
+div.page_controls span.global_buttons { float: right }
+div.page_controls span.global_buttons input { margin-left: 12px }
+
+h3.rs_tech_section_header { 
+        z-index: 0;
+	margin: 0px 0px 0.6em 0px; 
+	padding: 0px 0px 5px 0px; 
+	border-bottom: solid 1px #000000; 
+	color: #000000; 
+	font-size: 160% 
+}
+
+h3.section_header { 
+	margin: 0px 0px 0.6em 0px; 
+	padding: 0px 0px 5px 0px; 
+	border-bottom: solid 1px #B5C2D2; 
+	color: #000000; 
+	font-size: 160% 
+}
+
+h4.sub_header { margin: 0px 0px 0.5em 0px; font-size: 143%; color: #1567B3 }
+
+/* set legend style
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+dl.legend { margin: 0.8em 0px; padding: 0px; background-color: #ECF8F2 }
+dl.legend dt { position: absolute; left: -999999em }
+dl.legend dd { margin: 0px; padding: 0.6em }
+dl.legend dd span { font-weight: bold; color: #00A651 }
+
+/* begin - width settings
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* by pixel */
+.w700px { width: 700px !important}
+.w650px { width: 650px !important}
+.w600px { width: 600px !important}
+.w555px { width: 555px !important}
+.w550px { width: 550px !important}
+.w500px { width: 500px !important}
+.w450px { width: 450px !important}
+.w400px { width: 400px !important}
+.w350px { width: 350px !important}
+.w340px { width: 340px !important}
+.w320px { width: 320px !important}
+.w300px { width: 300px !important}
+.w280px { width: 280px !important}
+.w250px { width: 250px !important}
+.w220px { width: 220px !important}
+.w200px { width: 200px !important}
+.w150px { width: 150px !important}
+.w125px { width: 125px !important}
+.w100px { width: 100px !important}
+.w80px { width: 80px !important}
+.w50px { width: 50px !important}
+
+/* by percent */
+.w100p { width: 100% !important}
+.w95p { width: 95% !important}
+.w90p { width: 90% !important}
+.w85p { width: 85% !important}
+.w80p { width: 80% !important}
+.w75p { width: 75% !important}
+.w70p { width: 70% !important}
+.w65p { width: 65% !important}
+.w60p { width: 60% !important}
+.w55p { width: 55% !important}
+.w50p { width: 50% !important}
+.w45p { width: 45% !important}
+.w40p { width: 40% !important}
+.w35p { width: 35% !important}
+.w30p { width: 30% !important}
+.w25p { width: 25% !important}
+.w20p { width: 20% !important}
+.w15p { width: 15% !important}
+.w10p { width: 10% !important}
+
+/* end - width settings
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+ 
+

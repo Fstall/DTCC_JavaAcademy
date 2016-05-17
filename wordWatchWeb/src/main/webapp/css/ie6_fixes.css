@@ -1,0 +1,18 @@
+/******************************************************************************
+                               Global IE6 Fixes
+ ******************************************************************************/
+
+
+/******************************************************************************
+                            CDS-Specific IE6 FIXES
+ ******************************************************************************/
+
+/* one pixel adjustement for IE6 */
+#main_nav #ordersNav ul.subnav { left: 768px }
+
+/* this fixes a display bug in IE6 - the 'Orders' tab navigation needs to be absolutely position for subnav to display */
+#main_nav #ordersNav a { position: absolute; left: 860px; width: 89px; border-left: solid 1px #FFF }
+#main_nav #ordersNav ul.subnav li a { position: static }
+
+
+
