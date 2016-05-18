@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.rstech.wordwatch.dao.util.ClientAndUserMapper">
+	    <resultMap id="ClientAndUserMap" type="com.rstech.wordwatch.dao.util.ClientAndUserMapper$ClientWithUser">
+	          <association property="client" javaType="com.rstech.wordwatch.dao.RSClient">
+	            <id property="id" column="ID"/>
+	            <result property="NAME" column="name"/>
+	          </association>
+	          <association property="user" javaType="com.rstech.wordwatch.dao.RSUser">
+	            <id property="id" column="ID"/>
+	            <result property="LOGIN" column="login"/>
+	            <result property="PASSWORD" column="password"/>
+	          </association>
+	    </resultMap>
+	    <select id="selectAllUsersByClient" resultMap="ClientAndUserMap" parameterType="int">
+	          SELECT RS_CLIENT.name, RS_USER.login, RS_USER.password  
+	          FROM RS_CLIENT, RS_USER 
+	          where RS_USER.rs_client = RS_CLIENT.id
+	    </select>
+</mapper>

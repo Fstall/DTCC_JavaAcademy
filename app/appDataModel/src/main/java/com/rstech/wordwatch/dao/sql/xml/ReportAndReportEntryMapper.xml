@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.rstech.wordwatch.dao.util.ReportAndReportEntryMapper">
+	    <resultMap id="ReportAndReportEntryMap" type="com.rstech.wordwatch.dao.util.ReportAndReportEntryMapper$ReportWithReportEntry">
+	          <association property="report" javaType="com.rstech.wordwatch.dao.WordReport">
+	            <id property="id" column="ID"/>
+	            <result property="REPORT_TYPE" column="report_type"/>
+	          </association>
+	          <association property="entry" javaType="com.rstech.wordwatch.dao.WordReportEntry">
+	            <id property="id" column="ID"/>
+	            <result property="ENTRY_TYPE" column="entry_type"/>
+	          </association>
+	    </resultMap>
+	    <select id="selectReportEntryByReport" resultMap="ReportAndReportEntryMap" parameterType="int">
+	          SELECT WD_REPORT.report_type, WD_REPORT_ENTRY.entry_type 
+	          FROM WD_REPORT, WD_REPORT_ENTRY 
+	          where WD_REPORT_ENTRY.wd_report = WD_REPORT.id
+	    </select>
+	    
+	    
+	    <select id="selectReportEntryByReportID" resultMap="ReportAndReportEntryMap" parameterType="BigDecimal"  >
+  			SELECT WD_REPORT.report_type, WD_REPORT_ENTRY.entry_type 
+	          FROM WD_REPORT, WD_REPORT_ENTRY   
+       			where WD_REPORT.id = #{ID}  
+       			and WD_REPORT_ENTRY.wd_report = WD_REPORT.id  
+		</select>
+</mapper>

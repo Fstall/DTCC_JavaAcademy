@@ -1,0 +1,37 @@
+<scanning xmlns="urn:jboss:scanning:1.0">
+  <path name="lib/httpclient-3.1.jar">
+    <exclude name="org.apache.commons.httpclient.MultiThreadedHttpConnectionManager"/>
+    <exclude name="org.apache.commons.httpclient.SimpleHttpConnectionManager"/>
+    <exclude name="org.apache.commons.httpclient.ProxyClient$DummyConnectionManager"/>
+    
+  </path>
+  
+     <path name="lib/httpclient-3.1-rc1.jar">
+    <exclude name="org.apache.commons.httpclient.MultiThreadedHttpConnectionManager"/>
+    <exclude name="org.apache.commons.httpclient.SimpleHttpConnectionManager"/>
+    <exclude name="org.apache.commons.httpclient.ProxyClient$DummyConnectionManager"/>
+    
+  </path>
+    <path name="lib/httpclient-20020423.jar">
+    <exclude name="org.apache.commons.httpclient.MultiThreadedHttpConnectionManager"/>
+    <exclude name="org.apache.commons.httpclient.SimpleHttpConnectionManager"/>
+    <exclude name="org.apache.commons.httpclient.ProxyClient$DummyConnectionManager"/>
+    </path>
+  
+  
+  
+  <path name="lib/iText-2.0.7.jar">
+    <exclude name="com.lowagie.tools.HandoutPdf"/>
+    
+  </path>
+  <path name="lib/iText-2.1.7.jar">
+    <exclude name="com.lowagie.tools.HandoutPdf"/>
+  </path>
+  <path name="lib/iText-rups-2.1.7.jar">
+    <exclude name="com.lowagie.tools.HandoutPdf"/>
+  </path>
+  <path name="lib/iText-rtf-2.1.7.jar">
+    <exclude name="com.lowagie.tools.HandoutPdf"/>
+  </path>
+ 
+</scanning> 

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!-- 
+Notes -
+1. This file is used by MyBatis to load all the DAO object mapper files. If you
+   need to create a new DAO object from a new table, then you must put the generated
+   mapper xml file into this configuration xml file.
+
+2. I think the file name must be called confiuration.xml
+   See http://www.mybatis.org/core/configuration.html
+
+ -->
+
+
+<configuration>
+  
+ <properties resource="com/rstech/wordwatch/dao/config/dev/config.dev.properties"/>
+ 
+ <environments default="development"> 
+  <environment id="development">
+   <transactionManager type="JDBC"/>
+    <dataSource type="JNDI">
+        <property name="data_source" value="java:jboss/datasources/MySqlDS"/>
+    </dataSource>
+
+  </environment>
+    
+  <environment id="testing">
+   <transactionManager type="JDBC"/>
+   <dataSource type="POOLED">
+    <property name="driver" value="${db.driver}"/>
+    <property name="url" value="${db.url}"/>
+    <property name="username" value="${db.user}"/>
+    <property name="password" value="${db.pass}"/>
+    <property name="poolMaximumActiveConnections" value="20"/>
+    <property name="poolMaximumIdleConnections" value="5"/>
+    <property name="poolPingEnabled" value="true"/>
+    <property name="poolPingQuery" value="select 1"/>
+   </dataSource>
+  </environment>
+     
+ </environments>
+ 
+  <mappers>
+    <mapper resource="com/rstech/wordwatch/dao/sql/xml/WordReportMapper.xml"/>
+    <mapper resource="com/rstech/wordwatch/dao/sql/xml/WordReportEntryMapper.xml"/>
+    <mapper resource="com/rstech/wordwatch/dao/sql/xml/ReportAndReportEntryMapper.xml"/>
+    <mapper resource="com/rstech/wordwatch/dao/sql/xml/RSClientMapper.xml"/>
+    <mapper resource="com/rstech/wordwatch/dao/sql/xml/RSUserMapper.xml"/>
+    <mapper resource="com/rstech/wordwatch/dao/sql/xml/RSClientUserMapper.xml"/>
+    <mapper resource="com/rstech/wordwatch/dao/sql/xml/WDUserReportMapper.xml"/>
+    <mapper resource="com/rstech/wordwatch/dao/sql/xml/ScrLoginsAndLogoutsMapper.xml"/> 
+    <mapper resource="com/rstech/wordwatch/dao/sql/xml/WordReportEntryAuxMapper.xml"/>
+    <mapper resource="com/rstech/wordwatch/dao/sql/xml/RSUserLimitMapper.xml"/>
+    <mapper resource="com/rstech/wordwatch/dao/sql/xml/RSSearchLimitDomainTableMapper.xml"/>
+  </mappers>
+</configuration>

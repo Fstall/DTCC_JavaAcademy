@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="RSTechResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Source"/>
+        <xs:element ref="NumberOfResults"/>
+        <xs:element ref="SponsoredResults"/>
+        <xs:element ref="Results"/>
+        <xs:element ref="MoreResultsLinks"/>
+        <xs:element name="Html" type="xs:string" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Source" type="xs:NCName"/>
+  <xs:element name="NumberOfResults" type="xs:integer"/>
+  <xs:element name="SponsoredResults">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="SponsoredResult"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SponsoredResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Title"/>
+        <xs:element ref="Link"/>
+        <xs:element ref="AdUrl"/>
+        <xs:element ref="Snippet"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Results">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="10" maxOccurs="unbounded" ref="Result"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Result">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Title"/>
+        <xs:element ref="Link"/>
+        <xs:element ref="Snippet"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MoreResultsLinks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="MoreResultsLink"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MoreResultsLink" type="xs:string"/>
+  <xs:element name="Title" type="xs:string"/>
+  <xs:element name="Link" type="xs:anyURI"/>
+  <xs:element name="AdUrl" type="xs:anyURI"/>
+  <xs:element name="Snippet" type="xs:string"/>
+
+</xs:schema>

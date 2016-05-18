@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  <context id="RSUserClient" targetRuntime="MyBatis3">
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" 
+	    connectionURL="jdbc:mysql://localhost:3306/WDWATCH" 
+		userId="root"
+                password="MyDTCCR00tPass!">
+		</jdbcConnection>
+
+
+    <javaTypeResolver >
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+
+    <javaModelGenerator targetPackage="com.rstech.wordwatch.dao" targetProject="../../../src/main/java">
+      <property name="enableSubPackages" value="true" />
+      <property name="trimStrings" value="true" />
+    </javaModelGenerator>
+
+    <sqlMapGenerator targetPackage="com.rstech.wordwatch.dao.sql.xml"  targetProject="../../../src/main/java">
+      <property name="enableSubPackages" value="true" />
+    </sqlMapGenerator>
+
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.rstech.wordwatch.dao.mapper"  targetProject="../../../src/main/java">
+      <property name="enableSubPackages" value="true" />
+    </javaClientGenerator>
+    
+    <table tableName="RS_SESSION" domainObjectName="RSSessionDAO" >
+      <property name="useActualColumnNames" value="true"/>
+      <generatedKey column="ID" sqlStatement="MySql" identity="true" />  
+    </table>
+
+    <table tableName="RS_CLIENT" domainObjectName="RSClient" >
+      <property name="useActualColumnNames" value="true"/>
+      <generatedKey column="ID" sqlStatement="MySql" identity="true" />  
+    </table>
+    
+    <table tableName="RS_USER" domainObjectName="RSUser" >
+      <property name="useActualColumnNames" value="true"/>
+      <generatedKey column="ID" sqlStatement="MySql" identity="true" />  
+    </table>
+
+	<table tableName="RS_SRCH_LMT_DMN_TBL" domainObjectName="RSSearchLimitDomainTable" >
+      <property name="useActualColumnNames" value="true"/>
+      <generatedKey column="ID" sqlStatement="MySql" identity="true" />  
+    </table>
+    <table tableName="RS_USER_LMT" domainObjectName="RSUserLimit" >
+      <property name="useActualColumnNames" value="true"/>
+      <generatedKey column="ID" sqlStatement="MySql" identity="true" />  
+    </table>
+    
+    <table tableName="LOGINS_AND_LOGOUTS" domainObjectName="ScrLoginsAndLogouts" >
+      <property name="useActualColumnNames" value="true"/>
+      <generatedKey column="ID" sqlStatement="MySql" identity="true" />  
+    </table>
+    
+    <table tableName="WD_REPORT" domainObjectName="WordReport" >
+      <property name="useActualColumnNames" value="true"/>
+      <generatedKey column="ID" sqlStatement="MySql" identity="true" /> 
+    </table>
+    
+    <table tableName="WD_REPORT_ENTRY" domainObjectName="WordReportEntry" >
+      <property name="useActualColumnNames" value="true"/>
+      <generatedKey column="ID" sqlStatement="MySql" identity="true" />  
+    </table>
+    
+    <table tableName="WD_REPORT_ENTRY_AUX" domainObjectName="WordReportEntryAux" >
+      <property name="useActualColumnNames" value="true"/>
+      <generatedKey column="ID" sqlStatement="MySql" identity="true" />  
+    </table>
+    
+    <table tableName="WD_USER_REPORT_VIEW" domainObjectName="WDUserReport" >
+      <property name="useActualColumnNames" value="true"/>
+      <generatedKey column="ID" sqlStatement="MySql" identity="true" />  
+    </table>
+
+  </context>
+</generatorConfiguration>
+
+

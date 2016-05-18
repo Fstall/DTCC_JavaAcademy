@@ -1,0 +1,98 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>rstech.app</groupId>
+		<artifactId>app</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	<groupId>rstech.app</groupId>
+	<artifactId>RSImageService</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+
+	<name>RSImageService</name>
+	<url>http://maven.apache.org</url> 
+	<properties>
+		<app.context>RSImageService-0.0.1-SNAPSHOT</app.context>
+		<project.packaging>RSImageService-b0.0.1-SNAPSHOT</project.packaging> 
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
+	 
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<webXml>src\main\webapp\WEB-INF\web.xml</webXml>
+					<webResources>
+						<resource>
+							<directory>src/main/webapp</directory>
+							<filtering>${filtering}</filtering>
+							<includes>
+								<include>**/web.xml</include>
+							</includes>
+						</resource>
+					</webResources>
+					<archiveClasses>true</archiveClasses>
+				</configuration>
+			</plugin>
+			
+			
+			<!-- 
+			<plugin>
+                <groupId>org.jboss.as.plugins</groupId>
+                <artifactId>jboss-as-maven-plugin</artifactId>
+                <version>7.4.Final</version>
+                <executions>
+                    <execution>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                         <configuration>
+                            <jbossHome>/usr/share/jboss-as/standalone/deployments/</jbossHome>
+ 				           <hostname>masstermmind.com</hostname>
+          				    <port>9990</port>
+				            <username>test</username>
+                            <password>list4G0d</password>
+ 
+                         </configuration> 
+                    </execution>
+                </executions>
+            </plugin> -->
+
+			 
+			
+		</plugins>
+	</build>
+	 
+	
+	<dependencies>
+		<dependency>
+			<groupId>rstech.app</groupId>
+			<artifactId>appDataModel</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>rstech.app</groupId>
+			<artifactId>RSImageLib</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency> 
+		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>
