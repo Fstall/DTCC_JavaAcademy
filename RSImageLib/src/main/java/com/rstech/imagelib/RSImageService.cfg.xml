@@ -1,0 +1,35 @@
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="global.isDefaultImageShown">true</entry>
+
+	<entry key="global.scale.defaultIsImageScaled">false</entry>
+	<entry key="global.scale.height">300</entry>
+	<entry key="global.scale.width">300</entry>
+
+	<entry key="global.cropped.defaultIsImageCropped">false</entry>
+		
+	<entry key="tmus.root">c:/users/tony/rstechwork/opt/image/</entry>
+	<!-- <entry key="tmus.suffix"></entry> -->
+	<entry key="tmus.dbMode">prod</entry>
+
+	<entry key="tmca.root">/u01/archive/imagefiles/tm/ca/</entry>
+	<!-- <entry key="tmca.suffix"></entry> -->
+	<entry key="tmca.dbMode">prod</entry>
+
+	<entry key="us.root">c:/users/tony/rstechwork/opt/image/</entry>
+	<entry key="us.suffix">.jpg</entry>
+
+	<entry key="ca.root">/index2/TmImages/ImageTest/tm/ca</entry>
+	<entry key="ca.suffix">.png</entry>
+	
+	
+	<entry key="avantiq.root">/u01/archive/avantiq/</entry>
+	<entry key="avantiq.suffix">.jpg</entry>
+	
+	<entry key="test.isEnabled">false</entry>
+	<entry key="test.root">./test-images</entry>
+	<entry key="test.suffix"></entry>
+	<entry key="test.records">test-01.jpg, test-02.jpg, test-03.png, test-04.png, test-05.gif, test-06.gif, test-07.jpg</entry>
+	
+	
+</properties>

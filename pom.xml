@@ -66,10 +66,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
-	<build>
-		<filters>
-			<filter>../../app/src/main/resources/build.properties</filter>
-		</filters>
+	<build> 
 		<pluginManagement>
 			<plugins>
 				<plugin>
