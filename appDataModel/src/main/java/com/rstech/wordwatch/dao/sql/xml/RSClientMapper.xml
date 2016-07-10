@@ -157,7 +157,7 @@
     <selectKey keyProperty="ID" order="AFTER" resultType="java.lang.Long">
       SELECT LAST_INSERT_ID()
     </selectKey>
-    insert into rs_client ( ID, NAME, DISPLAY_NAME, IS_DELETED, 
+    insert into rs_client (ID, NAME, DISPLAY_NAME, IS_DELETED, 
       ADDRESS1, ADDRESS2, CITY, 
       STATE, ZIP, COUNTRY, 
       VERSION, SHOW_KEYFIND_NOTES, IS_LOGOUT_BTN_SHOWN
