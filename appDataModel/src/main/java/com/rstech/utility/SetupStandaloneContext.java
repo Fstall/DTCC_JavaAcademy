@@ -1,5 +1,6 @@
 package com.rstech.utility;
 
+import java.io.IOException;
 import java.util.Properties;
 
 import javax.naming.Context;
@@ -7,6 +8,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
+import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
 public class SetupStandaloneContext {
 	
@@ -26,8 +28,15 @@ public class SetupStandaloneContext {
 	    cpds.setPassword("MyDTCCR00tPass!");
 
 	    cpds.setInitialPoolSize(10); 
-		try {
-			
+	    
+	     
+		MysqlDataSource mysqlDS = null;
+		try {   
+			mysqlDS = new MysqlDataSource();
+			mysqlDS.setURL("jdbc:mysql://localhost:3306/WDWATCH?characterEncoding=utf8&tcpKeepAlive=true&autoReconnect=true");
+			mysqlDS.setUser("root");
+			mysqlDS.setPassword("MyDTCCR00tPass!");
+		 
 			System.setProperty(Context.INITIAL_CONTEXT_FACTORY,
 	                "org.apache.naming.java.javaURLContextFactory");
             System.setProperty(Context.URL_PKG_PREFIXES, 
@@ -35,7 +44,7 @@ public class SetupStandaloneContext {
             Context ic = new InitialContext(myBatisProperties);
             ic.createSubcontext("java:jboss");
             ic.createSubcontext("java:jboss/datasources");
-            ic.bind("java:jboss/datasources/MySqlDS", cpds);
+            ic.bind("java:jboss/datasources/MySqlDS", mysqlDS);
 		} catch (NamingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
