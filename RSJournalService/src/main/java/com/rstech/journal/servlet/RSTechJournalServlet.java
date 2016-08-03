@@ -237,7 +237,11 @@ public class RSTechJournalServlet extends HttpServlet {
 					System.out.println("WordReportEntry: " + each);
 					Calendar calendar = Calendar.getInstance();
 					java.sql.Date currentTimestamp = new java.sql.Date(calendar.getTime().getTime());
+<<<<<<< HEAD
 					//each.setENTRY_PUBLISHED_DATE(currentTimestamp);
+=======
+//					each.setENTRY_PUBLISHED_DATE(currentTimestamp);
+>>>>>>> branch 'master' of https://github.com/cchou-git/DTCC_JavaAcademy.git
 					WordReportEntryManager.updatePublishDate(each, currentTimestamp);
 					WordReportEntryManager.createAuxRecord(each.getID(), contextSentence, WordReportEntryManager.SENTENCE_KEY_CODE);
 				}

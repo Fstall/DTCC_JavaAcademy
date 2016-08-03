@@ -24,8 +24,8 @@ public class MyFirstRun   {
 		
 	public static void main(String argss[]) {
 				SqlSession session = null;
-				String clientName = "RS Tech";
-				String testUserId = "tchou";
+				String clientName = "UMesh Shop";
+				String testUserId = "uwhatever";
 				
 				SetupStandaloneContext.setup(); 
 				session = SQLConnection.getSessionFactory().openSession(true);
@@ -42,7 +42,7 @@ public class MyFirstRun   {
 				RSClientManager mgr = new RSClientManager();
 				RSClient aClient = mgr.getClientByClientName( clientName);
 				if (aClient == null) {
-					aClient = mgr.createNewClient("RS Tech", "RS Tech", "123 ABC Street", "", "TestCity", "OR", "98330", "USA");	
+					aClient = mgr.createNewClient(clientName, clientName, "123 ABC Street", "", "TestCity", "OR", "98330", "USA");	
 				}
 				
 				RSUserManager userMgr = new RSUserManager();
@@ -50,7 +50,7 @@ public class MyFirstRun   {
 				
 				if (aUser == null) {
 					try {
-						aUser = RSUserManager.createNewUserUnderSystem("tchou", "test_919", RSUserManager.getDeveloperUserType(), null);
+						aUser = RSUserManager.createNewUserUnderSystem(testUserId, "test_919", RSUserManager.getDeveloperUserType(), null);
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
@@ -59,7 +59,7 @@ public class MyFirstRun   {
 				
 				// test whether you can create a new user
 				try {
-					RSUserManager.createNewUserUnderSystem("tchou", "testpass", RSUserManager.getRegularUserType(), null);
+					RSUserManager.createNewUserUnderSystem(testUserId, "testpass", RSUserManager.getRegularUserType(), null);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -67,7 +67,7 @@ public class MyFirstRun   {
 				
 				// test whether you can create a new user
 				try {
-					RSUserManager.createNewUserUnderSystem("tonychoud@aol.com", "te!st1pass", RSUserManager.getDeveloperUserType(), aUser);
+					RSUserManager.createNewUserUnderSystem("abcd@aol.com", "te!st1pass", RSUserManager.getDeveloperUserType(), aUser);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -75,7 +75,7 @@ public class MyFirstRun   {
 
 				//   create a new student 
 				try {
-					RSUserManager.createNewUserUnderSystem("mdong", "test_798", RSUserManager.getRegularUserType(), aUser );
+					RSUserManager.createNewUserUnderSystem("cdong", "test_798", RSUserManager.getRegularUserType(), aUser );
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -83,7 +83,7 @@ public class MyFirstRun   {
 				
 				//   create a new student 
 				try {
-					RSUserManager.createNewUserUnderSystem("fchou", "test_465", RSUserManager.getRegularUserType(), aUser );
+					RSUserManager.createNewUserUnderSystem("gchou", "test_465", RSUserManager.getRegularUserType(), aUser );
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -96,7 +96,7 @@ public class MyFirstRun   {
 				}  
 				
 				
-				if (users != null) { 
+				if (users != null && users.size() > 0) { 
 					aUser = (RSUser) users.get(0);
 				}
 				
@@ -104,7 +104,7 @@ public class MyFirstRun   {
 				 
 				List<WDUserReport> userReports = null;
 				WDUserReport userReport = null;
-				String          testURL = "abc.com";
+				String          testURL = "abcddef.com";
 				
 				if (aUser != null) {
 					// This function will create a report for the user if one is not found.
