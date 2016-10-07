@@ -8,8 +8,8 @@
     <jdbcConnection driverClass="com.mysql.jdbc.Driver" 
 	    connectionURL="jdbc:mysql://localhost:3306/WDWATCH" 
 		userId="root"
-                password="MyDTCCR00tPass!">
-		</jdbcConnection>
+        password="toor">
+	</jdbcConnection>
 
 
     <javaTypeResolver >

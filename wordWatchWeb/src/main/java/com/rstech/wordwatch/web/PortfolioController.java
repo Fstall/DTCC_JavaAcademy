@@ -1,6 +1,8 @@
 package com.rstech.wordwatch.web;
 
-import org.springframework.web.servlet.mvc.Controller;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletException;
@@ -33,14 +35,15 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 
-public class PortfolioController implements Controller {
+@Controller
+public class PortfolioController {
 	private static final Class thisClass = PortfolioController.class;
 	private static final Logger logger = Logger.getLogger(thisClass);
 	
 	private static final String SORT_BY_DATE_ASC = "ORDER_BY_DATE_ASC";
 	private static final String SORT_BY_DATE_DESC = "ORDER_BY_DATE_DESC";
 
-
+	@RequestMapping("/jsp/rpt_portfolio.do")
 	public ModelAndView handleRequest(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		String methodName = "handleRequest";
@@ -96,7 +99,7 @@ public class PortfolioController implements Controller {
 						parameter += "&sortByDate=" + SORT_BY_DATE_DESC;
 						String ascdsc = "ascending";
 						mv.addObject("ascdsc", ascdsc);
-						mv.addObject("imgsvr", "http://localhost:8080/RSImageService-0.0.1-SNAPSHOT/GetImage?db=tmus&height=150&width=150&scaling=true&docId=arrowup");
+						mv.addObject("imgsvr", "http://localhost:10010/RSImageService-0.0.1-SNAPSHOT/GetImage?db=tmus&height=150&width=150&scaling=true&docId=arrowup");
 						
 					}
 					else if (isSortByDate.compareToIgnoreCase(SORT_BY_DATE_DESC) == 0) {
@@ -114,7 +117,7 @@ public class PortfolioController implements Controller {
 						parameter += "&sortByDate=" + SORT_BY_DATE_ASC;
 						String ascdsc = "descending";
 						mv.addObject("ascdsc", ascdsc);					
-						mv.addObject("imgsvr", "http://localhost:8080/RSImageService-0.0.1-SNAPSHOT/GetImage?db=tmus&height=150&width=150&scaling=true&docId=arrowdown");
+						mv.addObject("imgsvr", "http://localhost:10010/RSImageService-0.0.1-SNAPSHOT/GetImage?db=tmus&height=150&width=150&scaling=true&docId=arrowdown");
 						
 					} 
 					String nextClickDateSortURL = portfolioURL + parameter;
@@ -126,7 +129,7 @@ public class PortfolioController implements Controller {
 					mv.addObject("sortByDateLink", nextClickDateSortURL);
 					String ascdsc = "ascending";
 					mv.addObject("ascdsc", ascdsc);
-					mv.addObject("imgsvr", "http://localhost:8080/RSImageService-0.0.1-SNAPSHOT/GetImage?db=tmus&height=150&width=150&scaling=true&docId=arrowup");
+					mv.addObject("imgsvr", "http://localhost:10010/RSImageService-0.0.1-SNAPSHOT/GetImage?db=tmus&height=150&width=150&scaling=true&docId=arrowup");
 				}
 			
 				// note the function name is getClientByUser but the argument is 

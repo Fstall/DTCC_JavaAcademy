@@ -20,8 +20,11 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.log4j.Logger;
+
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.Controller;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.rstech.utility.URLEncoder;
 import com.rstech.wordwatch.business.domain.LoginUserInfo;
@@ -32,7 +35,8 @@ import com.rstech.wordwatch.dao.RSClient;
 import com.rstech.wordwatch.dao.RSUser;
 import com.rstech.wordwatch.web.session.WebSessionManager;
 
-public class LoginController implements Controller {
+@Controller
+public class LoginController {
 	private static final Class thisClass = LoginController.class;
 	private static final Logger logger = Logger.getLogger(thisClass);
 
@@ -54,13 +58,12 @@ public class LoginController implements Controller {
 	final String ACCOUNT_IS_LOCKED = "Your account is locked!";
 	final String ACCOUNT_IS_LOCKED_MESSAGE = "Please email to RSTech Customer Service (prototype phase won't provide) to unlock it! ";
 
-
-	public ModelAndView handleRequest(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+	@RequestMapping("/jsp/client_login.do")
+	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
 		String methodName = "handleRequest";
 		logger.debug("entering " + methodName);
 		
-
 		logger.info("Returning client_login view");
 
 		ModelAndView mav = new ModelAndView("client_login");

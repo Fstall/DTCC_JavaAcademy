@@ -145,8 +145,8 @@
     <selectKey keyProperty="ID" order="AFTER" resultType="java.lang.Integer">
       SELECT LAST_INSERT_ID()
     </selectKey>
-    insert into rs_srch_lmt_dmn_tbl (DESC_TX)
-    values (#{DESC_TX,jdbcType=VARCHAR})
+    insert into rs_srch_lmt_dmn_tbl (ID, DESC_TX)
+    values (#{ID,jdbcType=INTEGER}, #{DESC_TX,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.rstech.wordwatch.dao.RSSearchLimitDomainTable">
     <!--

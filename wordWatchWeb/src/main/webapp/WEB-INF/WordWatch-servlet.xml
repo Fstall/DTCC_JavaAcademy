@@ -2,55 +2,63 @@
 
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
-
+       	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       	http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/mvc
+		http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+		
+	<mvc:annotation-driven />
+	<context:component-scan base-package="com.rstech.wordwatch.web" />
+	
 	<!--
-		the application context definition for the springapp DispatcherServlet
+		the application context definition for the Springapp DispatcherServlet
 	-->
 
-	<bean id="propertyConfigurer"
-		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	<bean id="propertyConfigurer" 
+			class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="location">
 			<value>/WEB-INF/spring3mybatis3.properties</value>
 		</property>
 	</bean>
-
-	<bean name="/jsp/staff_login.do" class="com.rstech.wordwatch.web.StaffLoginController" />
-	<bean name="/jsp/welcome.do" class="com.rstech.wordwatch.web.WelcomeController" />
-	<bean name="/jsp/client_login.do" class="com.rstech.wordwatch.web.LoginController" />
-	<bean name="/jsp/rpt_portfolio.do" class="com.rstech.wordwatch.web.PortfolioController" />
-	<bean name="/jsp/client_edit.do" class="com.rstech.wordwatch.web.ClientEditController" />
-	<bean name="/jsp/client_list.do" class="com.rstech.wordwatch.web.ClientListController" />
-	<bean name="/jsp/user_edit.do" class="com.rstech.wordwatch.web.UserEditController" />
-	<bean name="/jsp/user_list.do" class="com.rstech.wordwatch.web.UserListController" />
-	<bean name="/jsp/user_report_list.do" class="com.rstech.wordwatch.web.UserReportListController" />
-	<bean name="/jsp/user_report_edit.do" class="com.rstech.wordwatch.web.UserReportEditController" />
-	<bean name="/jsp/report_entry_list.do" class="com.rstech.wordwatch.web.ReportEntryListController" />
-	<bean name="/jsp/report_entry_edit.do" class="com.rstech.wordwatch.web.ReportEntryEditController" />
-	<bean name="/jsp/user_signup.do" class="com.rstech.wordwatch.web.UserSignupController" />
-	<bean name="/jsp/student_list.do" class="com.rstech.wordwatch.web.StudentListController" />
-	<bean name="/jsp/forgotten_password_email.do" class="com.rstech.wordwatch.web.ForgottenPasswordController" />
-	<bean name="/jsp/word_of_the_day.do" class="com.rstech.wordwatch.web.WordOfTheDayController" />
+	
+	<!--     Bean Mapping is replaced RequestMapping Annotation
+		<bean name="/jsp/staff_login.do" class="com.rstech.wordwatch.web.StaffLoginController" />
+		<bean name="/jsp/welcome.do" class="com.rstech.wordwatch.web.WelcomeController" />
+		<bean name="/jsp/client_login.do" class="com.rstech.wordwatch.web.LoginController" /> 
+		<bean name="/jsp/rpt_portfolio.do" class="com.rstech.wordwatch.web.PortfolioController" /> 
+		<bean name="/jsp/client_edit.do" class="com.rstech.wordwatch.web.ClientEditController" /> 
+		<bean name="/jsp/client_list.do" class="com.rstech.wordwatch.web.ClientListController" />
+		<bean name="/jsp/user_edit.do" class="com.rstech.wordwatch.web.UserEditController" />
+		<bean name="/jsp/user_list.do" class="com.rstech.wordwatch.web.UserListController" />  
+		<bean name="/jsp/user_report_list.do" class="com.rstech.wordwatch.web.UserReportListController" /> 
+		<bean name="/jsp/user_report_edit.do" class="com.rstech.wordwatch.web.UserReportEditController" />
+		<bean name="/jsp/report_entry_list.do" class="com.rstech.wordwatch.web.ReportEntryListController" /> 
+		<bean name="/jsp/report_entry_edit.do" class="com.rstech.wordwatch.web.ReportEntryEditController" /> 
+		<bean name="/jsp/user_signup.do" class="com.rstech.wordwatch.web.UserSignupController" />  
+		<bean name="/jsp/student_list.do" class="com.rstech.wordwatch.web.StudentListController" />   
+		<bean name="/jsp/forgotten_password_email.do" class="com.rstech.wordwatch.web.ForgottenPasswordController" />  
+		<bean name="/jsp/word_of_the_day.do" class="com.rstech.wordwatch.web.WordOfTheDayController" />
+	-->
 	<!--
 	The following is for supporting Firefox user logging on to MassTermMind site so
 	they can be validated before submitting a request. 
 	 -->
-	<bean name="/jsp/user_log_in_dialog.do" class="com.rstech.wordwatch.web.UserLoginDialogController" />
+	<!-- <bean name="/jsp/user_log_in_dialog.do" class="com.rstech.wordwatch.web.UserLoginDialogController" /> -->
 	
 	<bean id="xmlViewResolver" class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
 		<property name="order" value="1"/>
   		<!--  <property name="basename" value="com.rstech.wordwatch.web.display.WordOfTheDayXMLView"/>   -->
   		<property name="basename" value="wordOfTheDayXMLView"/>
-  		
-  		
-  		
+  		  		
 	</bean>
 	
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="viewClass"
-			value="org.springframework.web.servlet.view.JstlView"></property>
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"></property>
 		<property name="prefix" value="/WEB-INF/jsp/"></property>
 		<property name="suffix" value=".jsp"></property>
 		<property name="order" value="2"/>
@@ -68,8 +76,7 @@
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 
-	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
-		destroy-method="close">
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
 		<property name="url" value="jdbc:oracle:thin:@${database.url}" />
 		<property name="username" value="${database.username}" />
@@ -78,26 +85,22 @@
 
 
 	<bean id="rsClient" class="org.mybatis.spring.mapper.MapperFactoryBean">
-		<property name="mapperInterface"
-			value="com.rstech.wordwatch.dao.mapper.RSClientMapper" />
+		<property name="mapperInterface" value="com.rstech.wordwatch.dao.mapper.RSClientMapper" />
 		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
 	</bean>
 
 	<bean id="rsUser" class="org.mybatis.spring.mapper.MapperFactoryBean">
-		<property name="mapperInterface"
-			value="com.rstech.wordwatch.dao.RSUser" />
+		<property name="mapperInterface" value="com.rstech.wordwatch.dao.RSUser" />
 		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
 	</bean>
 
 	<bean id="rsReportEntry" class="org.mybatis.spring.mapper.MapperFactoryBean">
-		<property name="mapperInterface"
-			value="com.rstech.wordwatch.dao.WordReportEntry" />
+		<property name="mapperInterface" value="com.rstech.wordwatch.dao.WordReportEntry" />
 		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
 	</bean>
 
 	<bean id="rsReport" class="org.mybatis.spring.mapper.MapperFactoryBean">
-		<property name="mapperInterface"
-			value="com.rstech.wordwatch.dao.WordReport" />
+		<property name="mapperInterface" value="com.rstech.wordwatch.dao.WordReport" />
 		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
 	</bean>
 

@@ -159,12 +159,12 @@
     </selectKey>
     insert into rs_client (NAME, DISPLAY_NAME, IS_DELETED, 
       ADDRESS1, ADDRESS2, CITY, 
-      STATE, ZIP, COUNTRY, 
+      STATE, ZIP, COUNTRY, ID,
       VERSION, SHOW_KEYFIND_NOTES, IS_LOGOUT_BTN_SHOWN
       )
     values (#{NAME,jdbcType=VARCHAR}, #{DISPLAY_NAME,jdbcType=VARCHAR}, #{IS_DELETED,jdbcType=VARCHAR}, 
       #{ADDRESS1,jdbcType=VARCHAR}, #{ADDRESS2,jdbcType=VARCHAR}, #{CITY,jdbcType=VARCHAR}, 
-      #{STATE,jdbcType=VARCHAR}, #{ZIP,jdbcType=VARCHAR}, #{COUNTRY,jdbcType=VARCHAR}, 
+      #{STATE,jdbcType=VARCHAR}, #{ZIP,jdbcType=VARCHAR}, #{COUNTRY,jdbcType=VARCHAR}, #{ID,jdbcType=BIGINT},
       #{VERSION,jdbcType=INTEGER}, #{SHOW_KEYFIND_NOTES,jdbcType=VARCHAR}, #{IS_LOGOUT_BTN_SHOWN,jdbcType=VARCHAR}
       )
   </insert>

@@ -151,6 +151,11 @@ public class RSTechSearchClient {
 							JsonString srcUrl = eachImage.getJsonString("src");
 							results.add(srcUrl.toString());
 						}
+						for (int i = 0; i < results.size(); i++){
+							String noQuotes = results.get(i);
+							noQuotes = noQuotes.replace("\"", "");
+							results.set(i, noQuotes);						
+						}
 					}
 				}
 			}

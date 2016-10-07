@@ -46,7 +46,7 @@ public class MyFirstRun_Orginal   {
 				RSClientManager mgr = new RSClientManager();
 				RSClient aClient = mgr.getClientByClientName( clientName);
 				if (aClient == null) {
-					aClient = mgr.createNewClient("RS Tech", "RS Tech", "123 ABC Street", "", "TestCity", "OR", "98330", "USA");	
+					aClient = mgr.createNewClient("RS Tech", "RS Tech", "123 ABC Street", "", "TestCity", "OR", "98330", "USA");				
 				}
 				
 				RSUserManager userMgr = new RSUserManager();
@@ -54,6 +54,7 @@ public class MyFirstRun_Orginal   {
 				
 				if (aUser == null) {
 					try {
+//						aUser = RSUserManager.createNewUserUnderSystem("tchou", "test_919", RSUserManager.getDeveloperUserType(), null, clientName);
 						aUser = RSUserManager.createNewUserUnderSystem("tchou", "test_919", RSUserManager.getDeveloperUserType(), null);
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
@@ -63,6 +64,7 @@ public class MyFirstRun_Orginal   {
 				
 				// test whether you can create a new user
 				try {
+//					RSUserManager.createNewUserUnderSystem("tchou", "testpass", RSUserManager.getRegularUserType(), null, clientName);
 					RSUserManager.createNewUserUnderSystem("tchou", "testpass", RSUserManager.getRegularUserType(), null);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
@@ -71,6 +73,7 @@ public class MyFirstRun_Orginal   {
 				
 				// test whether you can create a new user
 				try {
+//					RSUserManager.createNewUserUnderSystem("tonychoud@aol.com", "te!st1pass", RSUserManager.getDeveloperUserType(), aUser, clientName);
 					RSUserManager.createNewUserUnderSystem("tonychoud@aol.com", "te!st1pass", RSUserManager.getDeveloperUserType(), aUser);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
@@ -79,7 +82,8 @@ public class MyFirstRun_Orginal   {
 
 				//   create a new student 
 				try {
-					RSUserManager.createNewUserUnderSystem("mdong", "test_798", RSUserManager.getRegularUserType(), aUser );
+//					RSUserManager.createNewUserUnderSystem("mdong", "test_798", RSUserManager.getRegularUserType(), aUser , clientName);
+					RSUserManager.createNewUserUnderSystem("mdong", "test_798", RSUserManager.getRegularUserType(), aUser);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -87,7 +91,8 @@ public class MyFirstRun_Orginal   {
 				
 				//   create a new student 
 				try {
-					RSUserManager.createNewUserUnderSystem("fchou", "test_465", RSUserManager.getRegularUserType(), aUser );
+//					RSUserManager.createNewUserUnderSystem("fchou", "test_465", RSUserManager.getRegularUserType(), aUser , clientName);
+					RSUserManager.createNewUserUnderSystem("fchou", "test_465", RSUserManager.getRegularUserType(), aUser);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

@@ -18,12 +18,12 @@ public class SetupStandaloneContext_Original {
 		myBatisProperties.setProperty("JDBC.port", "3306"); 
 		myBatisProperties.setProperty("JDBC.schema", "WDWATCH");
 		myBatisProperties.setProperty("JDBC.username", "root");
-		myBatisProperties.setProperty("JDBC.password", "MyDTCCR00tPass!");
+		myBatisProperties.setProperty("JDBC.password", "toor");
 		myBatisProperties.setProperty("JDBC.autoCommit", "true"); 
 		ComboPooledDataSource cpds = new ComboPooledDataSource(); 
 		cpds.setJdbcUrl("jdbc:mysql://localhost:3306/WDWATCH?characterEncoding=utf8&tcpKeepAlive=true&autoReconnect=true");
 	    cpds.setUser("root");
-	    cpds.setPassword("MyDTCCR00tPass!");
+	    cpds.setPassword("toor");
 
 	    cpds.setInitialPoolSize(10); 
 		try {

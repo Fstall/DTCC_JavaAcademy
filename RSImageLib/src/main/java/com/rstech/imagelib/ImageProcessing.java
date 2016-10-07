@@ -30,7 +30,7 @@ public class ImageProcessing {
 	public static final String DB_CA = "ca";
 	public static final String DB_ARCHIVE = "archive";
 	public static final String DB_ARCHIVE_UM = "um";
-	public static  String ImageFolder = "c:/users/tony/rstechwork/opt/image/";
+	public static  String ImageFolder = "C:/Users/r23ak/WatchImages";
 
 	
 	private static String OS = System.getProperty("os.name").toLowerCase();
@@ -483,7 +483,7 @@ public class ImageProcessing {
 			String filename = "";
 			
 			if (isWindows()) {
-				filename = "c:/users/tony/rstechwork/opt/image/" + imgFileName; 
+				filename = "C:/Users/r23ak/WatchImages/" + imgFileName; 
 			} else if (isUnix()) {
 				filename = "/opt/image/" + imgFileName;
 			}

@@ -10,8 +10,11 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.log4j.Logger;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.Controller; 
 
 import com.rstech.utility.URLEncoder;
 import com.rstech.wordwatch.business.domain.LoginUserInfo;
@@ -23,12 +26,14 @@ import com.rstech.wordwatch.dao.RSUser;
 import com.rstech.wordwatch.web.session.WebSessionManager;
 import com.rstech.wordwatch.business.domain.RSUserManager;
 
-public class UserSignupController  implements Controller {
+@Controller
+public class UserSignupController {
 	private static final Class thisClass = UserSignupController.class;
 	private static final Logger logger = Logger.getLogger(thisClass);
 	
 	private static final String SIGNUP_EVENT = "Sign Up!"; 
 
+	@RequestMapping("/jsp/user_signup.do")
     public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
     	String methodName = "handleRequest";

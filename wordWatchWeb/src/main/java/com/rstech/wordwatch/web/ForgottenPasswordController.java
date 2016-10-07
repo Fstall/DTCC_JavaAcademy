@@ -21,21 +21,27 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.log4j.Logger;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.Controller;
+
 
 import java.util.*;
 //import javax.mail.*;
 //import javax.mail.internet.*;
 import javax.activation.*;
 
-public class ForgottenPasswordController implements Controller {
+@Controller
+public class ForgottenPasswordController {
 	private static final Class thisClass = ForgottenPasswordController.class;
 	private static final Logger logger = Logger.getLogger(thisClass);
 
 	final int BUFSIZE = 2000000;
 	final String RESET_EVENT = "Reset";
 
+	@RequestMapping("/jsp/forgotten_password_email.do")
 	public ModelAndView handleRequest(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		String methodName = "handleRequest";

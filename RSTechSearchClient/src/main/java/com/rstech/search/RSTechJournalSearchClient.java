@@ -23,7 +23,7 @@ import com.rstech.vendor.pearson.PearsonLongmanManager;
 public class RSTechJournalSearchClient {
 	private static final Class thisClass = RSTechJournalSearchClient.class;
 	private static Logger logger = Logger.getLogger(thisClass);
-
+	
 	public static ArrayList<String> parseGoogleImageJson(String contents) {
 		ArrayList<String> results = new ArrayList<String>();
 
@@ -43,6 +43,11 @@ public class RSTechJournalSearchClient {
 								.getValuesAs(JsonObject.class)) {
 							JsonString srcUrl = eachImage.getJsonString("src");
 							results.add(srcUrl.toString());
+						}
+						for (int i = 0; i < results.size(); i++){
+							String noQuotes = results.get(i);
+							noQuotes = noQuotes.replace("\"", "");
+							results.set(i, noQuotes);						
 						}
 					}
 				}
@@ -104,6 +109,8 @@ public class RSTechJournalSearchClient {
 					}
 				}
 			}
+			aWord.setDefinitions(definitionList);
+			aWord.setSampleSentences(sampleSentenceList);
 		} catch (RSTechException e) {
 
 			// TODO Auto-generated catch block

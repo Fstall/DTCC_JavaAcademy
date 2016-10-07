@@ -48,13 +48,13 @@ Notes -
     <mapper resource="com/rstech/wordwatch/dao/sql/xml/WordReportMapper.xml"/>
     <mapper resource="com/rstech/wordwatch/dao/sql/xml/WordReportEntryMapper.xml"/>
     <mapper resource="com/rstech/wordwatch/dao/sql/xml/ReportAndReportEntryMapper.xml"/>
-    <mapper resource="com/rstech/wordwatch/dao/sql/xml/RSClientMapper.xml"/>
-    <mapper resource="com/rstech/wordwatch/dao/sql/xml/RSUserMapper.xml"/>
+    <mapper resource="com/rstech/wordwatch/dao/sql/xml/RSClientMapper.xml"/>					<!-- done -->  
+    <mapper resource="com/rstech/wordwatch/dao/sql/xml/RSUserMapper.xml"/>         				<!-- done -->        
     <mapper resource="com/rstech/wordwatch/dao/sql/xml/RSClientUserMapper.xml"/>
     <mapper resource="com/rstech/wordwatch/dao/sql/xml/WDUserReportMapper.xml"/>
     <mapper resource="com/rstech/wordwatch/dao/sql/xml/ScrLoginsAndLogoutsMapper.xml"/> 
     <mapper resource="com/rstech/wordwatch/dao/sql/xml/WordReportEntryAuxMapper.xml"/>
-    <mapper resource="com/rstech/wordwatch/dao/sql/xml/RSUserLimitMapper.xml"/>
-    <mapper resource="com/rstech/wordwatch/dao/sql/xml/RSSearchLimitDomainTableMapper.xml"/>
+    <mapper resource="com/rstech/wordwatch/dao/sql/xml/RSUserLimitMapper.xml"/>					<!-- done --> 
+    <mapper resource="com/rstech/wordwatch/dao/sql/xml/RSSearchLimitDomainTableMapper.xml"/>	<!-- done -->  
   </mappers>
 </configuration>

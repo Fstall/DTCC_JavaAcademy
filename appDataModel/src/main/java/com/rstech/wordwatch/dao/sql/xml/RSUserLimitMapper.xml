@@ -147,9 +147,9 @@
     <selectKey keyProperty="ID" order="AFTER" resultType="java.lang.Long">
       SELECT LAST_INSERT_ID()
     </selectKey>
-    insert into rs_user_lmt (RS_USER, SEARCH_TP_NO, LAST_MODIFIED_TS
+    insert into rs_user_lmt (ID, RS_USER, SEARCH_TP_NO, LAST_MODIFIED_TS
       )
-    values (#{RS_USER,jdbcType=BIGINT}, #{SEARCH_TP_NO,jdbcType=INTEGER}, #{LAST_MODIFIED_TS,jdbcType=TIMESTAMP}
+    values (#{ID,jdbcType=BIGINT}, #{RS_USER,jdbcType=BIGINT}, #{SEARCH_TP_NO,jdbcType=INTEGER}, #{LAST_MODIFIED_TS,jdbcType=TIMESTAMP}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.rstech.wordwatch.dao.RSUserLimit">

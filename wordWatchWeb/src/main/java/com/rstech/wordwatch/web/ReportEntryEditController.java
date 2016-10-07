@@ -1,6 +1,8 @@
 package com.rstech.wordwatch.web;
 
-import org.springframework.web.servlet.mvc.Controller;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletException;
@@ -29,13 +31,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class ReportEntryEditController implements Controller {
+@Controller
+public class ReportEntryEditController {
 	private static final Class thisClass = ReportEntryEditController.class;
 	private static final Logger logger = Logger.getLogger(thisClass);
 	
 	final String SAVE_EVENT = "save";
 
-
+	@RequestMapping("/jsp/report_entry_edit.do")
 	public ModelAndView handleRequest(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		String methodName = "handleRequest";
@@ -127,7 +130,7 @@ public class ReportEntryEditController implements Controller {
 						detail.setSampleSentenceList((ArrayList) auxRecords);
 						
 						mav.addObject("detailWord", detail);
-						mav.addObject("imgsvr", "http://masstermmind.com:8080/RSImageService-0.0.1-SNAPSHOT/GetImage?db=tmus&scaling=true&docId=");
+						mav.addObject("imgsvr", "http://masstermmind.com:10010/RSImageService-0.0.1-SNAPSHOT/GetImage?db=tmus&scaling=true&docId=");
 						break;
 					}
 				}

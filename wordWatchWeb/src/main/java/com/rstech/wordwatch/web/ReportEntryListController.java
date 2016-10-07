@@ -1,6 +1,8 @@
 package com.rstech.wordwatch.web;
 
-import org.springframework.web.servlet.mvc.Controller;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletException;
@@ -30,10 +32,12 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-public class ReportEntryListController implements Controller {
+@Controller
+public class ReportEntryListController {
 	private static final Class thisClass = ReportEntryListController.class;
 	private static final Logger logger = Logger.getLogger(thisClass);
-
+	
+	@RequestMapping("/jsp/report_entry_list.do")
 	public ModelAndView handleRequest(HttpServletRequest request,
 		HttpServletResponse response) throws ServletException, IOException {
 		String methodName = "handleRequest";
@@ -79,7 +83,7 @@ public class ReportEntryListController implements Controller {
 					} 
 					entries.addObject("words", words);
 					entries.addObject("word_edit_links", entry_edit_links); 
-					entries.addObject("imgsvr", "http://masstermmind.com:8080/RSImageService-0.0.1-SNAPSHOT/GetImage?db=tmus&height=150&width=150&scaling=true&docId=");
+					entries.addObject("imgsvr", "http://masstermmind.com:10010/RSImageService-0.0.1-SNAPSHOT/GetImage?db=tmus&height=150&width=150&scaling=true&docId=");
 				}  
 			}
 		}

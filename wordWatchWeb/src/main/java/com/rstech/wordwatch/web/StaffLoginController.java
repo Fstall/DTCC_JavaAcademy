@@ -2,7 +2,10 @@ package com.rstech.wordwatch.web;
 
 import com.rstech.utility.URLEncoder;
 import com.rstech.wordwatch.web.ApplicationError;
-import org.springframework.web.servlet.mvc.Controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletException;
@@ -24,8 +27,8 @@ import java.io.IOException;
 import java.util.List;
 
 
- 
-public class StaffLoginController  implements Controller {
+@Controller 
+public class StaffLoginController {
 	private static final Class thisClass = StaffLoginController.class;
 	private static final Logger logger = Logger.getLogger(thisClass);
 
@@ -40,7 +43,7 @@ public class StaffLoginController  implements Controller {
 	final String FAILED_TO_LOGIN = "Failed to login!";
 	final String FAILED_TO_LOGIN_MESSAGE = "Please re-try! ";
 	 
-
+	@RequestMapping("/jsp/staff_login.do")
     public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
     	String methodName = "handleRequest";

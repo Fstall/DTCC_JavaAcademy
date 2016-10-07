@@ -24,8 +24,8 @@ public class MyFirstRun   {
 		
 	public static void main(String argss[]) {
 				SqlSession session = null;
-				String clientName = "RS Tech";
-				String testUserId = "tchou";
+				String clientName = "Kim Tech";
+				String testUserId = "ckim5";
 				
 				SetupStandaloneContext.setup(); 
 				session = SQLConnection.getSessionFactory().openSession(true);
@@ -33,14 +33,14 @@ public class MyFirstRun   {
 				
 				try {
 					RSUserManager.initDomainTable(); // set up some domain tables	
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
+				} catch (Exception e) {					
 					e.printStackTrace();					
 				}
 				
 				
 				RSClientManager mgr = new RSClientManager();
-				RSClient aClient = mgr.getClientByClientName( clientName);
+				RSClient aClient = mgr.createNewClient(clientName, clientName, "456 Jones Way", "", "Hillsboro", "OR", "98455", "USA");	
+				aClient = mgr.getClientByClientName(clientName);
 				if (aClient == null) {
 					aClient = mgr.createNewClient("RS Tech", "RS Tech", "123 ABC Street", "", "TestCity", "OR", "98330", "USA");	
 				}
@@ -51,6 +51,7 @@ public class MyFirstRun   {
 				if (aUser == null) {
 					try {
 						aUser = RSUserManager.createNewUserUnderSystem("tchou", "test_919", RSUserManager.getDeveloperUserType(), null);
+//						aUser = RSUserManager.createNewUserUnderSystem("tchou", "test_919", RSUserManager.getDeveloperUserType(), null, clientName);
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
@@ -59,7 +60,8 @@ public class MyFirstRun   {
 				
 				// test whether you can create a new user
 				try {
-					RSUserManager.createNewUserUnderSystem("tchou", "testpass", RSUserManager.getRegularUserType(), null);
+//					RSUserManager.createNewUserUnderSystem("dchou", "test$pass2", RSUserManager.getRegularUserType(), null, clientName);
+					RSUserManager.createNewUserUnderSystem("dchou", "test$pass2", RSUserManager.getRegularUserType(), null);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -67,23 +69,26 @@ public class MyFirstRun   {
 				
 				// test whether you can create a new user
 				try {
+//					RSUserManager.createNewUserUnderSystem("tonychoud@aol.com", "te!st1pass", RSUserManager.getDeveloperUserType(), aUser, clientName);
 					RSUserManager.createNewUserUnderSystem("tonychoud@aol.com", "te!st1pass", RSUserManager.getDeveloperUserType(), aUser);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 
-				//   create a new student 
+				//   test whether you can create a new user
 				try {
-					RSUserManager.createNewUserUnderSystem("mdong", "test_798", RSUserManager.getRegularUserType(), aUser );
+//					RSUserManager.createNewUserUnderSystem("mdong", "test_798", RSUserManager.getRegularUserType(), aUser, clientName);
+					RSUserManager.createNewUserUnderSystem("mdong", "test_798", RSUserManager.getRegularUserType(), aUser);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				
-				//   create a new student 
+				//   test whether you can create a new user
 				try {
-					RSUserManager.createNewUserUnderSystem("fchou", "test_465", RSUserManager.getRegularUserType(), aUser );
+//					RSUserManager.createNewUserUnderSystem("fchou", "test_465", RSUserManager.getRegularUserType(), aUser , clientName);
+					RSUserManager.createNewUserUnderSystem("fchou", "test_465", RSUserManager.getRegularUserType(), aUser);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

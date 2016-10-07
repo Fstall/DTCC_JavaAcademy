@@ -1,6 +1,8 @@
 package com.rstech.wordwatch.web;
 
-import org.springframework.web.servlet.mvc.Controller;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletException;
@@ -23,13 +25,15 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class UserReportEditController implements Controller {
+@Controller
+public class UserReportEditController {
 	private static final Class thisClass = UserReportEditController.class;
 	private static final Logger logger = Logger.getLogger(thisClass);
 
 	final String SAVE_EVENT = "Save";
 	final String CANCEL_EVENT = "Cancel";
 	
+	@RequestMapping("/jsp/user_report_edit.do")
 	public ModelAndView handleRequest(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		String methodName = "handleRequest";

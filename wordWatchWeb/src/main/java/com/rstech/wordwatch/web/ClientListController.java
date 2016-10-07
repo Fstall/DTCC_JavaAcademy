@@ -3,8 +3,10 @@ package com.rstech.wordwatch.web;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.web.servlet.mvc.Controller;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -21,12 +23,13 @@ import com.rstech.wordwatch.dao.RSClient;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class ClientListController extends BaseRSController implements Controller {
+@Controller
+public class ClientListController extends BaseRSController {
 	private static final Class thisClass = ClientListController.class;
 	private static final Logger logger = Logger.getLogger(thisClass);
 
 
-	
+	@RequestMapping("/jsp/client_list.do")
 	public ModelAndView handleRequest(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		String methodName = "handleRequest";

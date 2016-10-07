@@ -149,16 +149,17 @@ public class RSUserManager {
 	 * RS Tech allows users to create a new user name and password under
 	 * the system client: RS Tech.
 	 */
-	public static RSUser createNewUserUnderSystem(String userIdEmailAddress, 
-			String password,
-			int userType, RSUser aReferenceUser) throws Exception {
-	 	String clientName = "RS Tech"; 
+//	public static RSUser createNewUserUnderSystem(String userIdEmailAddress, String password,
+//												int userType, RSUser aReferenceUser, String clientName) throws Exception {
+	public static RSUser createNewUserUnderSystem(String userIdEmailAddress, String password,
+			int userType, RSUser aReferenceUser) throws Exception {		
+		String clientName = "RS Tech"; 
 	 	String methodName = "createNewUserUnderSystem";
 	 	logger.debug("entering " + methodName);
 		
 	 	  
 		RSClientManager mgr = new RSClientManager();
-		RSClient aClient = mgr.getClientByClientName( clientName);
+		RSClient aClient = mgr.getClientByClientName(clientName);
 		if (aClient == null) {
 			aClient = mgr.createNewClient("RS Tech", "RS Tech", "123 ABC Street", "", "TestCity", "OR", "98330", "USA");	
 		}

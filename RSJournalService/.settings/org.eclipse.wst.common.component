@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="RSJournalService">
+        <wb-resource deploy-path="/WEB-INF/web.xml" source-path="/src/main/webapp/WEB-INF/web.xml"/>
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <dependent-module archiveName="appDataModel-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/appDataModel/appDataModel">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="RSImageLib-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/RSImageLib/RSImageLib">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="RSTechSearchClient-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/RSTechSearchClient/RSTechSearchClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="RSTechException-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/RSTechException/RSTechException">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="RSJournalService"/>
+        <property name="java-output-path" value="/RSJournalService/target/classes"/>
+    </wb-module>
+</project-modules>

@@ -1,6 +1,8 @@
 package com.rstech.wordwatch.web;
 
-import org.springframework.web.servlet.mvc.Controller;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletException;
@@ -20,10 +22,12 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class UserListController implements Controller {
+@Controller
+public class UserListController {
 	private static final Class thisClass = UserListController.class;
 	private static final Logger logger = Logger.getLogger(thisClass);
 
+	@RequestMapping("/jsp/user_list.do")
 	public ModelAndView handleRequest(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		String methodName = "handleRequest";

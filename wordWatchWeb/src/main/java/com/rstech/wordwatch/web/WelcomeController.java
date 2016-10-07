@@ -1,6 +1,8 @@
 package com.rstech.wordwatch.web;
 
-import org.springframework.web.servlet.mvc.Controller;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletException;
@@ -20,7 +22,8 @@ import com.rstech.wordwatch.dao.RSClient;
 import java.io.IOException;
 import java.util.List;
 
-public class WelcomeController extends BaseRSController  implements Controller {
+@Controller
+public class WelcomeController extends BaseRSController {
 	private static final Class thisClass = WelcomeController.class;
 	private static final Logger logger = Logger.getLogger(thisClass);
 
@@ -31,7 +34,7 @@ public class WelcomeController extends BaseRSController  implements Controller {
 	final String CANNOT_FIND_USER_TEXT    = "Cannot find user ";
 	final String CANNOT_FIND_USER_MESSAGE = "Please re-entry! ";
 	
-
+	@RequestMapping("/jsp/welcome.do")
 	public ModelAndView handleRequest(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		String methodName = "handleRequest";
